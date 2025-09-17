@@ -1,0 +1,18 @@
+/**CSS comment
+-----------------------------
+00: css variable
+01: color
+02: layout
+03: typography
+04: transition, animation, selector practice
+05: any exploration
+----------------------------
+*/
+
+/**01: color */
+body{
+    background-color: hsla(270, 45%, 20%, 0.705);
+}
+#zen-intro{
+    background-color: hsl(139, 45%, 20%);
+}

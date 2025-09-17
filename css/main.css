@@ -9,10 +9,36 @@
 ----------------------------
 */
 
+/**00: css variable */
+:root{
+    --body-color: hsla(270, 45%, 20%, 0.705);
+    --zen-intro-color: hsl(140, 7%, 50%);
+    --sidebar-color: hsla(240, 16%, 48%, 0.796);
+    --h1-color: hsla(72, 47%, 73%, 0.946);
+    --h2-color: hsla(320, 87%, 57%, 0.521);
+}
+
 /**01: color */
 body{
-    background-color: hsla(270, 45%, 20%, 0.705);
+    background-color: var(--body-color);
 }
 #zen-intro{
-    background-color: hsl(139, 45%, 20%);
+    background-color: var(--zen-intro-color);
 }
+.sidebar{
+    background-color: var(--sidebar-color);
+}
+h1{
+    background-color: var(--h1-color);
+}
+h2{
+    background-color: var(--h2-color);
+}
+
+/**02: layout */
+
+/**03: typography */
+
+/**04: transition, animation, selector practice */
+
+/**05: any exploration */

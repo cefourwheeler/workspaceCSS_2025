@@ -16,6 +16,8 @@
     --sidebar-color: hsla(240, 16%, 48%, 0.796);
     --h1-color: hsla(72, 47%, 73%, 0.946);
     --h2-color: hsla(320, 87%, 57%, 0.521);
+    --page-width: 45vw;
+    --page-top: 75vh;
 }
 
 /**01: color */
@@ -36,6 +38,12 @@ h2{
 }
 
 /**02: layout */
+div.explaination, div.requirement, div.benefits, div.participation{
+    position: fixed;
+    width: var(--page-width);
+    top: var(--page-top);
+    
+}
 
 /**03: typography */
 

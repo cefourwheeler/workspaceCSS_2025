@@ -11,13 +11,14 @@
 
 /**00: css variable */
 :root{
-    --body-color: hsla(270, 45%, 20%, 0.705);
+    --body-color: hsla(270, 25%, 98%, 0.845);
     --zen-intro-color: hsl(140, 7%, 50%);
     --sidebar-color: hsla(240, 16%, 48%, 0.796);
-    --h1-color: hsla(72, 47%, 73%, 0.946);
-    --h2-color: hsla(320, 87%, 57%, 0.521);
+    --h1-color: rgb(103, 171, 126);
+    --h2-color: hsla(140, 7%, 50%,);
     --page-width: 45vw;
     --page-top: 75vh;
+    --bottom-bar-height: 25vh;
 }
 
 /**01: color */
@@ -41,10 +42,53 @@ h2{
 div.explaination, div.requirement, div.benefits, div.participation{
     position: fixed;
     width: var(--page-width);
-    top: var(--page-top);
-    
+    top: var(--page-top);   
+}
+div.explaination{
+    left: 2vw;
+    background-image: url(../img/newspaper1.jpg);
+}
+div.requirement{
+    left: 20vw;
+}
+div.benefits{
+    left: 38vw;
+}
+div.participation{
+    left: 56vw;
 }
 
+aside.sidebar{
+    position: absolute;
+    right: 0;
+    top: 0%;
+    width: 15vw;
+    height: 90vh;
+}
+div.extra1{
+    position: fixed;
+    left: 25%;
+    width: 35%;
+    height: 70vh;
+    background-image: url(../img/newspaper3.jpg);
+}
+div.extra2{
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    height: var(--bottom-bar-height);
+    background-color: rgba(43, 23, 173, 0.405);
+}
+
+section.intro{
+    position: relative;
+    width: 78%;
+    left: 10%;
+    top: 5%;
+    z-index: 2;
+    background-image: url(../img/newspaper2.jpg);
+}
 /**03: typography */
 
 /**04: transition, animation, selector practice */

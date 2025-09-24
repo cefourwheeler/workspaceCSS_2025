@@ -129,6 +129,20 @@ li{
     list-style-type: none;
 }
 
+#design-selection h3{
+    display: none;
+    /*visibility: hidden;*/
+}
+
+#design-archives {
+    display: none;
+}
+
+#resources {
+    display: none;
+}
+
+
 /**04: transition, animation, selector practice */
 
 /**05: any exploration */

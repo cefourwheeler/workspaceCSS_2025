@@ -63,7 +63,7 @@ aside.sidebar{
     right: 0;
     top: 0%;
     width: 15vw;
-    height: 90vh;
+    height: 115vh;
 }
 div.extra1{
     position: fixed;
@@ -78,18 +78,56 @@ div.extra2{
     bottom: 0;
     right: 0;
     height: var(--bottom-bar-height);
-    background-color: rgba(43, 23, 173, 0.405);
+    background-color: rgb(43, 23, 173);
 }
 
 section.intro{
     position: relative;
-    width: 78%;
-    left: 10%;
+    width: 50%;
+    left: 25%;
     top: 5%;
-    z-index: 2;
+    z-index: -2;
     background-image: url(../img/newspaper2.jpg);
 }
+/**file tap */
+div.explanation h3, div.requirement h3{
+    margin-top: -8%;
+    border: 5px solid burlywood;
+    background-color: rgb(43, 23, 173);
+    width: 125px;
+    padding: 5px;
+}
+
 /**03: typography */
+#font-face{
+    font-family:"mFont";
+    src: url(../fonts/chunkfive.eot);
+}
+
+header h1{
+    font-family: "mFont", sans-serif;
+    font-weight: bolder;
+    font-size: 1.12em;
+    letter-spacing: normal;
+}
+
+header h2{
+    font-family: 'Roboto Mono', sans-serif;
+    font-weight: 300;
+    font-size: 1.5em;
+    letter-spacing: 0.1em;
+    text-shadow: 1px 1px 2px rgb(38, 4, 78);
+    text-decoration: overline;
+    text-decoration: wavy;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
 
 /**04: transition, animation, selector practice */
 

@@ -1,4 +1,4 @@
-/**CSS comment
+/** CSS comment
 -----------------------------
 00: css variable
 01: color
@@ -6,74 +6,91 @@
 03: typography
 04: transition, animation, selector practice
 05: any exploration
-----------------------------
+-----------------------------
 */
 
-/**00: css variable */
-:root{
+/** 00: css variable */
+:root {
     --body-color: hsla(270, 25%, 98%, 0.845);
     --zen-intro-color: hsl(140, 7%, 50%);
     --sidebar-color: hsla(240, 16%, 48%, 0.796);
     --h1-color: rgb(103, 171, 126);
-    --h2-color: hsla(140, 7%, 50%,);
-    --page-width: 45vw;
-    --page-top: 75vh;
-    --bottom-bar-height: 25vh;
+    --h2-color: hsl(140, 7%, 50%);
+    --page-width: 30%;
+    --page-top: 85%;
+    --bottom-bar-height: 15vh;
 }
 
-/**01: color */
-body{
+/** 01: color */
+body {
     background-color: var(--body-color);
 }
-#zen-intro{
+
+#zen-intro {
     background-color: var(--zen-intro-color);
 }
-.sidebar{
+
+.sidebar {
     background-color: var(--sidebar-color);
 }
-h1{
+
+h1 {
     background-color: var(--h1-color);
 }
-h2{
+
+h2 {
     background-color: var(--h2-color);
 }
 
-/**02: layout */
-div.explaination, div.requirement, div.benefits, div.participation{
+/** 02: layout */
+div.explanation,
+div.requirements,
+div.benefits,
+div.participation {
     position: fixed;
     width: var(--page-width);
-    top: var(--page-top);   
-}
-div.explaination{
-    left: 2vw;
-    background-image: url(../img/newspaper1.jpg);
-}
-div.requirement{
-    left: 20vw;
-}
-div.benefits{
-    left: 38vw;
-}
-div.participation{
-    left: 56vw;
+    top: var(--page-top);
 }
 
-aside.sidebar{
+div.explanation {
+    left: 1%;
+    background-image: url(../img/newspaper1.jpg);
+}
+
+div.requirements {
+    left: 18%;
+}
+
+div.benefits {
+    left: 36%;
+}
+
+div.participation {
+    left: 54%;
+}
+
+aside.sidebar {
     position: absolute;
+    top: 20%;
     right: 0;
-    top: 0%;
-    width: 15vw;
-    height: 115vh;
+    bottom: 0;
+    width: 20%;
 }
-div.extra1{
+
+/* background decoration */
+div.extra1 {
     position: fixed;
-    left: 25%;
-    width: 35%;
-    height: 70vh;
+    top: 10vh;
+    left: 20%;
+    width: 30%;
+    height: 80%;
     background-image: url(../img/newspaper3.jpg);
+    z-index: -1;
+    transform: rotate(30deg);
 }
-div.extra2{
-    position:fixed;
+
+div.extra2 {
+    position: fixed;
     left: 0;
     bottom: 0;
     right: 0;
@@ -81,68 +98,147 @@ div.extra2{
     background-color: rgb(43, 23, 173);
 }
 
-section.intro{
-    position: relative;
-    width: 50%;
-    left: 25%;
-    top: 5%;
-    z-index: -2;
+section.intro {
+    position: fixed;
+    top: 10vh;
+    left: 20%;
+    width: 30%;
+    height: 80vh;
+    padding: 1%;
     background-image: url(../img/newspaper2.jpg);
 }
-/**file tap */
-div.explanation h3, div.requirement h3{
-    margin-top: -8%;
-    border: 5px solid burlywood;
-    background-color: rgb(43, 23, 173);
-    width: 125px;
-    padding: 5px;
+
+/* file tabs */
+div.explanation h3,
+div.requirements h3,
+div.benefits h3,
+div.participation h3 {
+    margin-top: -10%;
+    padding-left: 10px;
+    width: 100px;
+    border: 3px dashed black;
+    background-color: burlywood;
+    border-radius: 20px;
 }
 
-/**03: typography */
-#font-face{
-    font-family:"mFont";
+/** 03: typography */
+@font-face {
+    font-family: "mFont";
     src: url(../fonts/chunkfive.eot);
 }
 
-header h1{
+header h1 {
     font-family: "mFont", sans-serif;
     font-weight: bolder;
-    font-size: 1.12em;
+    font-size: 1.25em;
     letter-spacing: normal;
+    text-transform: uppercase;
 }
 
-header h2{
+header h2 {
     font-family: 'Roboto Mono', sans-serif;
     font-weight: 300;
     font-size: 1.5em;
     letter-spacing: 0.1em;
     text-shadow: 1px 1px 2px rgb(38, 4, 78);
-    text-decoration: overline;
-    text-decoration: wavy;
+    text-decoration: overline wavy;
 }
 
-a{
+a {
     text-decoration: none;
 }
 
-li{
+li {
     list-style-type: none;
 }
 
-#design-selection h3{
-    display: none;
-    /*visibility: hidden;*/
-}
-
-#design-archives {
+#design-selection h3 {
     display: none;
 }
 
-#resources {
+/* hide archives and resources */
+#design-archives,
+#zen-resources {
     display: none;
 }
 
+/** 04: transition, animation, selector practice */
+a:hover {
+    font-size: 1.25em;
+}
 
-/**04: transition, animation, selector practice */
+h3:hover {
+    font-size: 1.25em;
+    color: aqua;
+}
 
-/**05: any exploration */
+div.explanation:active,
+div.requirements:active,
+div.benefits:active,
+div.participation:active {
+    top: 15vh;
+    height: 90vh;
+    transition: all 0.75s ease-in;
+}
+
+p::first-letter {
+    font-size: 1.5em;
+    color: red;
+}
+
+ul {
+    list-style-image: url(../img/star.png);
+}
+
+section.intro h3~p {
+    transition: transform 0.75s ease-in-out;
+    text-transform: capitalize;
+}
+
+section.intro h3:hover~p {
+    transform: scale(0.85);
+    opacity: 0;
+}
+
+h2 {
+    background-image: linear-gradient(0deg, rgb(43, 23, 173), rgb(85, 99, 156), rgb(91, 134, 105));
+    animation: changeColor 1s infinite running;
+}
+
+footer {
+    position: fixed;
+    bottom: 1vh;
+    z-index: 4;
+    animation: footC 1s 3;
+}
+
+@keyframes changeColor {
+    from {
+        background-image: linear-gradient(15deg, rgb(43, 23, 173), rgb(85, 99, 156), rgb(91, 134, 105));
+    }
+
+    50% {
+        background-image: linear-gradient(45deg, rgb(91, 134, 105), rgb(85, 99, 156), rgb(43, 23, 173));
+    }
+
+    to {
+        background-image: linear-gradient(75deg, rgb(85, 99, 156), rgb(91, 134, 105), rgb(43, 23, 173));
+    }
+}
+
+@keyframes footC {
+    from {
+        transform: translateX(-100%);
+        opacity: 0;
+    }
+
+    to {
+        transform: translateX(45%);
+        opacity: 0.75;
+    }
+}
+
+/** 05: any exploration */
+aside.sidebar {
+    clip-path: polygon(0 0, 0 60%, 50% 100%, 90% 60%, 90% 0);
+}
